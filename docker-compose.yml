@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    
+    container_name: kaychat_app
+    ports:
+      - "5015:5015"
+
+    restart: unless-stopped
