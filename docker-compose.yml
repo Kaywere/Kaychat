@@ -7,5 +7,7 @@ services:
     container_name: kaychat_app
     ports:
       - "5015:5015"
-
+    environment:
+      - PORT=5015
+      - NODE_ENV=development
     restart: unless-stopped
