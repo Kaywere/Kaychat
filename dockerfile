@@ -17,7 +17,7 @@ COPY backend/ ./backend/
 # 1. npm install --prefix backend
 # 2. npm install --prefix frontend
 # 3. npm run build --prefix frontend
-RUN npm run build
+CMD ["npm", "run", "build"]
 
 # The command to run your application when the container starts
 # This will execute: npm run start --prefix backend
