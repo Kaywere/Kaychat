@@ -1,5 +1,5 @@
 # Stage 1: Use an official Node.js runtime as a parent image
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 # Set the working directory in the container
 WORKDIR /app
@@ -17,7 +17,8 @@ COPY backend/ ./backend/
 # 1. npm install --prefix backend
 # 2. npm install --prefix frontend
 # 3. npm run build --prefix frontend
-CMD ["npm", "run", "build"]
+
+RUN npm run build
 
 # The command to run your application when the container starts
 # This will execute: npm run start --prefix backend

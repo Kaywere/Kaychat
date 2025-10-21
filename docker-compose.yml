@@ -9,5 +9,5 @@ services:
       - "5015:5015"
     environment:
       - PORT=5015
-      - NODE_ENV=development
+      - NODE_ENV=production
     restart: unless-stopped
