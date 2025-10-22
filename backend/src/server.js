@@ -12,6 +12,7 @@ const __dirname=path.resolve()
 
 const PORT=process.env.PORT || 5015
 
+app.use(express.json());
 app.use("/api/auth/",authRoutes)
 app.use("/api/messages/",messageRoutes)
 
